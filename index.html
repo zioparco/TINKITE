@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="nl" class="lang-nl" data-lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n="meta.title">Tinkité – Welkom in jouw stukje paradijs in Sicilië</title>
+  <meta name="description"
+        content="Escape naar een privé Siciliaanse estate met zwembad en zeezicht. Culinaire, wellness & creatieve retreats, georganiseerd door een Belgisch-Italiaanse familie."
+        data-i18n-alt="meta.description">
+  <meta name="theme-color" content="#FFF8E7">
+
+  <!-- Tailwind + aspect-ratio plugin -->
+  <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
+
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="./assets/hero-pool-seaview.jpg">
+</head>
+
+<body class="antialiased text-gray-800" style="background-color:#FFF8E7;scroll-behavior:smooth;">
+
+  <!-- TAAL-SWITCHER -->
+  <div class="fixed top-4 right-4 z-50 flex gap-2">
+    <button id="set-nl" class="lang-btn px-3 py-1 rounded-lg bg-white/80 font-medium shadow">NL</button>
+    <button id="set-en" class="lang-btn px-3 py-1 rounded-lg bg-white/30 hover:bg-white/50 font-medium shadow">EN</button>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" role="banner" class="relative h-screen">
+    <picture>
+      <source srcset="./assets/hero-pool-seaview.webp" type="image/webp">
+      <img src="./assets/hero-pool-seaview.jpg"
+           class="absolute inset-0 w-full h-full object-cover object-center"
+           loading="eager" fetchpriority="high"
+           alt="" data-i18n-alt="hero.img.alt">
+    </picture>
+    <div class="absolute inset-0 bg-gradient-to-br from-black/60 to-black/20"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6 md:px-12">
+      <h1 class="text-5xl md:text-6xl font-serif mb-4 drop-shadow-lg" data-i18n="hero.title">
+        Welkom in Tinkité
+      </h1>
+      <p class="text-lg md:text-xl mb-8 drop-shadow-md" data-i18n="hero.subtitle">
+        Een plek waar je geniet van ruimte, privacy, eenvoud&nbsp;en&nbsp;de&nbsp;luxe&nbsp;van&nbsp;niets&nbsp;te&nbsp;moeten<br>
+        <span class="uppercase tracking-wide">Sampieri, Sicily</span>
+      </p>
+      <a href="#main-facilities"
+         class="inline-block bg-amber-500 hover:bg-amber-600 transition py-3 px-6 rounded-lg font-medium shadow-lg"
+         aria-label="Scroll"
+         data-i18n="hero.cta">
+        Ontdek Onze Formule
+      </a>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id="our-story" class="py-16 px-4 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-serif text-center mb-8" data-i18n="story.heading">De luxe van eenvoud</h2>
+    <p class="mb-8 text-center max-w-2xl mx-auto" data-i18n="story.text">
+      Bij Tinkité Sicily draait alles om rust, ruimte en kleine momenten van geluk. Van het eerste zonlicht in de ochtend tot de laatste gloed van de avondzon: hier leef je op jouw ritme, omringd door natuur en eenvoud.
+    </p>
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h3 class="font-semibold mb-2" data-i18n="story.offer.title">Wat wij aanbieden:</h3>
+        <ul class="list-disc pl-5 space-y-2 mb-8">
+          <li data-i18n="story.offer.li1">Privé-domein met twee comfortabele huisjes tot max 12 gasten</li>
+          <li data-i18n="story.offer.li2">Groot zwembad met zeezicht en poolhouse</li>
+          <li data-i18n="story.offer.li3">Volledig uitgeruste keukens voor gezellige kookmomenten</li>
+          <li data-i18n="story.offer.li4">Tuin vol geurige kruiden en lokale bloemen</li>
+          <li data-i18n="story.offer.li5">Persoonlijke, discrete begeleiding</li>
+          <li data-i18n="story.offer.li6">Ruimte, rust en natuur om te ademen en te genieten</li>
+        </ul>
+
+        <h3 class="font-semibold mb-2" data-i18n="story.sampieri.title">Wat je kan verwachten van Sampieri:</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li data-i18n="story.sampieri.li1">Authentieke Siciliaanse sfeer, ver weg van massatoerisme</li>
+          <li data-i18n="story.sampieri.li2">Brede, ongerepte stranden met goudkleurig zand</li>
+          <li data-i18n="story.sampieri.li3">Kleine visserdorpjes waar het leven zachtjes stroomt</li>
+          <li data-i18n="story.sampieri.li4">Avonden met vurige zonsondergangen</li>
+          <li data-i18n="story.sampieri.li5">Cultuursteden zoals Scicli, Modica en Noto vlakbij</li>
+        </ul>
+
+        <p class="mt-6 italic" data-i18n="story.quote">
+          Hier leef je volgens het ritme van de zon, de zee en de aarde.<br>Hier proef je het échte Sicilië.
+        </p>
+      </div>
+      <div class="space-y-6">
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+          <picture>
+            <source srcset="./assets/PHOTO_FAMILY_COOKING.webp" type="image/webp">
+            <img src="./assets/PHOTO_FAMILY_COOKING.jpg"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 alt="" loading="lazy"
+                 data-i18n-alt="story.img1.alt">
+          </picture>
+        </div>
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+          <picture>
+            <source srcset="./assets/PHOTO_SUNSET_TERRACE.webp" type="image/webp">
+            <img src="./assets/PHOTO_SUNSET_TERRACE.jpg"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 alt="" loading="lazy"
+                 data-i18n-alt="story.img2.alt">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONZE FORMULE -->
+  <section id="main-facilities" class="py-16 px-4" style="background-color:#ECE2D0;">
+    <h2 class="text-3xl font-serif text-center mb-12" data-i18n="formula.heading">Onze Formule</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <!-- Faro -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition flex flex-col">
+        <h3 class="text-2xl font-semibold mb-2" data-i18n="faro.title">Faro</h3>
+        <p class="italic mb-4" data-i18n="faro.tagline">Charmant gelijkvloers verblijf voor rust en comfort.</p>
+        <h4 class="font-semibold mb-1" data-i18n="faro.layout">Indeling:</h4>
+        <ul class="list-disc pl-5 mb-4 space-y-1 text-sm">
+          <li data-i18n="faro.li1">Living met directe tuin­toegang</li>
+          <li data-i18n="faro.li2">Volledig uitgeruste keuken</li>
+          <li data-i18n="faro.li3">Master bedroom (tweepersoonsbed/split)</li>
+          <li data-i18n="faro.li4">2e slaapkamer (twee singles)</li>
+          <li data-i18n="faro.li5">Badkamer met regendouche</li>
+          <li data-i18n="faro.li6">Apart gastentoilet</li>
+        </ul>
+        <a href="#faro-details"
+           class="mt-auto inline-block bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 px-4 rounded-lg text-center"
+           aria-label="Lees meer"
+           data-i18n="common.readmore">
+          Lees meer
+        </a>
+      </div>
+
+      <!-- Passero -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition flex flex-col">
+        <h3 class="text-2xl font-semibold mb-2" data-i18n="passero.title">Passero</h3>
+        <p class="italic mb-4" data-i18n="passero.tagline">Ruimer gelijkvloers huis voor families en vrienden.</p>
+        <h4 class="font-semibold mb-1" data-i18n="passero.layout">Indeling:</h4>
+        <ul class="list-disc pl-5 mb-4 space-y-1 text-sm">
+          <li data-i18n="passero.li1">Open leefruimte met zithoek & eetgedeelte</li>
+          <li data-i18n="passero.li2">Volledig uitgeruste keuken</li>
+          <li data-i18n="passero.li3">2 master bedrooms</li>
+          <li data-i18n="passero.li4">2 slaapkamers met stapelbed</li>
+          <li data-i18n="passero.li5">2 badkamers met douche & toilet</li>
+        </ul>
+        <a href="#passero-details"
+           class="mt-auto inline-block bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 px-4 rounded-lg text-center"
+           aria-label="Lees meer"
+           data-i18n="common.readmore">
+          Lees meer
+        </a>
+      </div>
+
+      <!-- Poolhouse -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition flex flex-col">
+        <h3 class="text-2xl font-semibold mb-2" data-i18n="poolhouse.title">Poolhouse</h3>
+        <p class="italic mb-4" data-i18n="poolhouse.tagline">Ontspanning met panoramisch zeezicht.</p>
+        <h4 class="font-semibold mb-1" data-i18n="poolhouse.what">Wat biedt het:</h4>
+        <ul class="list-disc pl-5 mb-4 space-y-1 text-sm">
+          <li data-i18n="poolhouse.li1">Overdekte lounge met zeezicht</li>
+          <li data-i18n="poolhouse.li2">BBQ-zone & eetplaats</li>
+          <li data-i18n="poolhouse.li3">Buitencinema</li>
+          <li data-i18n="poolhouse.li4">Pingpong & tafelvoetbal</li>
+          <li data-i18n="poolhouse.li5">Massageruimte</li>
+          <li data-i18n="poolhouse.li6">Buitendouche & toilet</li>
+        </ul>
+        <a href="#poolhouse-details"
+           class="mt-auto inline-block bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 px-4 rounded-lg text-center"
+           aria-label="Lees meer"
+           data-i18n="common.readmore">
+          Lees meer
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FARO DETAILS -->
+  <section id="faro-details" class="py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-serif mb-6" data-i18n="faro.details.heading">Faro – Detail</h2>
+    <p class="mb-8" data-i18n="faro.details.text">Extra foto’s en verdieping over de inrichting, sfeer en ligging.</p>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+        <picture>
+          <source srcset="./assets/faro-1.webp" type="image/webp">
+          <img src="./assets/faro-1.jpg"
+               class="absolute inset-0 w-full h-full object-cover"
+               alt="" loading="lazy"
+               data-i18n-alt="faro.details.img1.alt">
+        </picture>
+      </div>
+      <div class="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+        <picture>
+          <source srcset="./assets/faro-2.webp" type="image/webp">
+          <img src="./assets/faro-2.jpg"
+               class="absolute inset-0 w-full h-full object-cover"
+               alt="" loading="lazy"
+               data-i18n-alt="faro.details.img2.alt">
+        </picture>
+      </div>
+    </div>
+    <p class="mt-6" data-i18n="faro.details.text2">Faro biedt een serene sfeer met directe toegang tot de tuin. Perfect voor koppels of kleine gezinnen die privacy en comfort waarderen.</p>
+  </section>
+
+  <!-- PASSERO DETAILS -->
+  <section id="passero-details" class="py-16 px-4 max-w-4xl mx-auto bg-gray-50">
+    <h2 class="text-3xl font-serif mb-6" data-i18n="passero.details.heading">Passero – Detail</h2>
+    <p class="mb-8" data-i18n="passero.details.text">Ideaal voor groepen of families, met ruime leefruimte en moderne voorzieningen.</p>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+        <picture>
+          <source srcset="./assets/passero-1.webp" type="image/webp">
+          <img src="./assets/passero-1.jpg"
+               class="absolute inset-0 w-full h-full object-cover"
+               alt="" loading="lazy"
+               data-i18n-alt="passero.details.img1.alt">
+        </picture>
+      </div>
+      <div class="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+        <picture>
+          <source srcset="./assets/passero-2.webp" type="image/webp">
+          <img src="./assets/passero-2.jpg"
+               class="absolute inset-0 w-full h-full object-cover"
+               alt="" loading="lazy"
+               data-i18n-alt="passero.details.img2.alt">
+        </picture>
+      </div>
+    </div>
+    <p class="mt-6" data-i18n="passero.details.text2">Passero heeft twee master bedrooms en extra slaapplaatsen, ideaal voor families of vriendengroepen.</p>
+  </section>
+
+  <!-- POOLHOUSE DETAILS -->
+  <section id="poolhouse-details" class="py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-serif mb-6" data-i18n="poolhouse.details.heading">Poolhouse – Detail</h2>
+    <p class="mb-8" data-i18n="poolhouse.details.text">Lounge, buitencinema, panoramisch zeezicht en meer.</p>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+        <picture>
+          <source srcset="./assets/poolhouse-1.webp" type="image/webp">
+          <img src="./assets/poolhouse-1.jpg"
+               class="absolute inset-0 w-full h-full object-cover"
+               alt="" loading="lazy"
+               data-i18n-alt="poolhouse.details.img1.alt">
+        </picture>
+      </div>
+      <div class="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+        <picture>
+          <source srcset="./assets/poolhouse-2.webp" type="image/webp">
+          <img src="./assets/poolhouse-2.jpg"
+               class="absolute inset-0 w-full h-full object-cover"
+               alt="" loading="lazy"
+               data-i18n-alt="poolhouse.details.img2.alt">
+        </picture>
+      </div>
+    </div>
+    <p class="mt-6" data-i18n="poolhouse.details.text2">Geniet van BBQ-avonden, film-nights onder de sterren en pure ontspanning.</p>
+  </section>
+
+  <!-- GALERIJ -->
+  <section id="gallery" class="py-16 px-4 bg-white">
+    <h2 class="text-3xl font-serif text-center mb-8" data-i18n="gallery.heading">Sfeerimpressies</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <a href="./assets/gallery1.jpg" class="glightbox" data-gallery="tinkite">
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="./assets/gallery1-thumb.jpg"
+               class="absolute inset-0 w-full h-full object-cover"
+               alt="" loading="lazy"
+               data-i18n-alt="gallery.img1.alt">
+        </div>
+      </a>
+      <a href="./assets/gallery2.jpg" class="glightbox" data-gallery="tinkite">
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="./assets/gallery2-thumb.jpg"
+               class="absolute inset-0 w-full h-full object-cover"
+               alt="" loading="lazy"
+               data-i18n-alt="gallery.img2.alt">
+        </div>
+      </a>
+      <a href="./assets/gallery3.jpg" class="glightbox" data-gallery="tinkite">
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="./assets/gallery3-thumb.jpg"
+               class="absolute inset-0 w-full h-full object-cover"
+               alt="" loading="lazy"
+               data-i18n-alt="gallery.img3.alt">
+        </div>
+      </a>
+      <a href="./assets/gallery4.jpg" class="glightbox" data-gallery="tinkite">
+        <div class="relative overflow-hidden rounded-lg shadow-lg aspect-square">
+          <img src="./assets/gallery4-thumb.jpg"
+               class="absolute inset-0 w-full h-full object-cover"
+               alt="" loading="lazy"
+               data-i18n-alt="gallery.img4.alt">
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ANDERE FACILITEITEN -->
+  <section id="additional-facilities" class="py-16 px-4 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-serif text-center mb-8" data-i18n="otherfac.heading">Andere Faciliteiten</h2>
+    <ul class="list-disc pl-5 space-y-2 text-lg">
+      <li data-i18n="otherfac.li1">Grote speeltuin met schommels, glijbaan en zandbak</li>
+      <li data-i18n="otherfac.li2">Overdekte garage met parkeer- en fietsbergruimte</li>
+      <li data-i18n="otherfac.li3">Uitgestrekte tuin vol kruiden, bloemen & olijfbomen</li>
+      <li data-i18n="otherfac.li4">Privéterrassen bij elk huisje</li>
+    </ul>
+  </section>
+
+  <!-- INCLUDED -->
+  <section id="included" class="py-16 px-4" style="background-color:#ECE2D0;">
+    <h2 class="text-3xl font-serif text-center mb-8" data-i18n="included.heading">Alles is geregeld vanaf je landing</h2>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <ul class="list-disc pl-5 space-y-2">
+        <li data-i18n="included.li1">Twee huisjes samen geschikt voor maximaal 12 gasten</li>
+        <li data-i18n="included.li2">Luchthaventransfer (optioneel, op aanvraag) vanaf Catania Airport</li>
+        <li data-i18n="included.li3">Persoonlijke assistentie - altijd beschikbaar, maar discreet</li>
+        <li data-i18n="included.li4">Welkomstmand bij aankomst met lokale basisproducten</li>
+        <li data-i18n="included.li5">Fris bedlinnen en schoonmaakservice</li>
+      </ul>
+      <ul class="list-disc pl-5 space-y-2">
+        <li data-i18n="included.li6">Privé zwembad & estate 24/7</li>
+        <li data-i18n="included.li7">Snelle Wi-Fi</li>
+        <li data-i18n="included.li8">Handdoeken, lakens & verzorgingsproducten</li>
+        <li data-i18n="included.li9">Privé parking</li>
+        <li data-i18n="included.li10">Optioneel: massage, yoga, chef, trekking, excursies</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DATES & PRICING -->
+  <section id="dates" class="py-16 px-4 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-serif text-center mb-8" data-i18n="dates.heading">Retreat Data & Prijzen 2025</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse min-w-max">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-4 py-2" data-i18n="dates.th.retreat">Retreat</th>
+            <th class="px-4 py-2" data-i18n="dates.th.dates">Datums</th>
+            <th class="px-4 py-2" data-i18n="dates.th.guests">Gasten</th>
+            <th class="px-4 py-2" data-i18n="dates.th.price">Prijs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t">
+            <td class="px-4 py-2" data-i18n="dates.row1.retreat">Retreat mei</td>
+            <td class="px-4 py-2" data-i18n="dates.row1.dates">18–24 mei</td>
+            <td class="px-4 py-2">12</td>
+            <td class="px-4 py-2" data-i18n="dates.row1.price">(reeds geboekt)</td>
+          </tr>
+          <tr class="border-t bg-gray-50">
+            <td class="px-4 py-2" data-i18n="dates.row2.retreat">Retreat juni</td>
+            <td class="px-4 py-2" data-i18n="dates.row2.dates">8–14 juni</td>
+            <td class="px-4 py-2">12</td>
+            <td class="px-4 py-2">€9.600</td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-2" data-i18n="dates.row3.retreat">Retreat juli</td>
+            <td class="px-4 py-2" data-i18n="dates.row3.dates">13–19 juli</td>
+            <td class="px-4 py-2">12</td>
+            <td class="px-4 py-2" data-i18n="dates.row3.price">(reeds geboekt)</td>
+          </tr>
+          <tr class="border-t bg-gray-50">
+            <td class="px-4 py-2" data-i18n="dates.row4.retreat">Retreat augustus</td>
+            <td class="px-4 py-2" data-i18n="dates.row4.dates">3–9 augustus</td>
+            <td class="px-4 py-2">12</td>
+            <td class="px-4 py-2">€12.600</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm italic" data-i18n="dates.note">*Prijs exclusief vlucht. €450 voorschot vereist.</p>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="bg-white py-16 px-4 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-serif mb-8" data-i18n="testimonials.heading">Gasten aan het woord</h2>
+    <div class="space-y-6">
+      <blockquote class="italic" data-i18n="testimonials.q1">“Beste week van ons leven. Mijn tieners vergaten hun gsm!”<br><span class="font-semibold">Els & Jan, Antwerpen</span></blockquote>
+      <blockquote class="italic" data-i18n="testimonials.q2">“We kookten, lachten, zwommen onder de sterren. We boeken alvast opnieuw.”<br><span class="font-semibold">Julie, Gent</span></blockquote>
+      <blockquote class="italic" data-i18n="testimonials.q3">“Als chef dacht ik Siciliaanse smaken te kennen. Marco's nonna gaf me een masterclass.”<br><span class="font-semibold">Tom, Rotterdam</span></blockquote>
+    </div>
+  </section>
+
+  <!-- RESERVE FORM -->
+  <section id="reserve" class="py-16 px-4 max-w-3xl mx-auto" style="background-color:#FFF8E7;">
+    <h2 class="text-3xl font-serif text-center mb-4" data-i18n="reserve.heading">Klaar om mee te reizen?</h2>
+    <p class="text-center mb-8" data-i18n="reserve.text">Wij antwoorden binnen 24 uur en helpen met vluchten of speciale wensen.</p>
+    <form class="space-y-4">
+      <input type="text" placeholder="Volledige naam" required
+             class="w-full p-3 border rounded"
+             data-i18n-placeholder="reserve.name.placeholder">
+      <input type="email" placeholder="E-mailadres" required
+             class="w-full p-3 border rounded"
+             data-i18n-placeholder="reserve.email.placeholder">
+      <input type="tel" placeholder="Telefoonnummer (optioneel)"
+             class="w-full p-3 border rounded"
+             data-i18n-placeholder="reserve.phone.placeholder">
+      <select class="w-full p-3 border rounded" data-i18n-placeholder="reserve.select.placeholder">
+        <option>De Siciliaanse Tafel – 18–24 mei</option>
+        <option>Slow Living Sicily – 8–14 juni</option>
+        <option>De Siciliaanse Tafel – 13–19 juli</option>
+        <option>Creatieve Escape – 7–13 september</option>
+      </select>
+      <input type="number" placeholder="Aantal gasten" min="1"
+             class="w-full p-3 border rounded"
+             data-i18n-placeholder="reserve.guests.placeholder">
+      <textarea placeholder="Speciale wensen of dieetvoorkeuren"
+                class="w-full p-3 border rounded"
+                data-i18n-placeholder="reserve.message.placeholder"></textarea>
+      <button type="submit"
+              class="w-full bg-amber-500 hover:bg-amber-600 transition text-white py-3 rounded-lg"
+              data-i18n="reserve.submit">
+        Verzend aanvraag
+      </button>
+      <p class="text-xs text-center mt-2" data-i18n="reserve.note">Jouw gegevens zijn veilig – geen spam.</p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white py-8 px-4 text-center text-sm text-gray-600">
+    <p>&copy; 2025 Tinkité Sicily</p>
+    <p>
+      <a href="mailto:hello@tinkite.com" class="hover:underline">hello@tinkite.com</a>
+      | +39 XXX XXX XXX (Sicilië)
+      | +32 XXX XX XX XX (België)
+    </p>
+    <div class="mt-2 space-x-4">
+      <a href="#" class="hover:underline" aria-label="Instagram">Instagram</a>
+      <a href="#" class="hover:underline" aria-label="Facebook">Facebook</a>
+      <a href="#" class="hover:underline" aria-label="WhatsApp">WhatsApp</a>
+    </div>
+  </footer>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+
+  <script defer>
+    // 1) Vertaalobject
+    const t = {
+      nl: {
+        'meta.title': 'Tinkité – Welkom in jouw stukje paradijs in Sicilië',
+        'meta.description': 'Escape naar een privé Siciliaanse estate met zwembad en zeezicht. Culinaire, wellness & creatieve retreats, georganiseerd door een Belgisch-Italiaanse familie.',
+        'hero.title': 'Welkom in Tinkité',
+        'hero.subtitle': 'Een plek waar je geniet van ruimte, privacy, eenvoud&nbsp;en&nbsp;de&nbsp;luxe&nbsp;van&nbsp;niets&nbsp;te&nbsp;moeten<br><span class="uppercase tracking-wide">Sampieri, Sicily</span>',
+        'hero.cta': 'Ontdek Onze Formule',
+        'hero.img.alt': 'Infinity-pool met zeezicht bij zonsondergang',
+        'story.heading': 'De luxe van eenvoud',
+        'story.text': 'Bij Tinkité Sicily draait alles om rust, ruimte en kleine momenten van geluk. Van het eerste zonlicht in de ochtend tot de laatste gloed van de avondzon: hier leef je op jouw ritme, omringd door natuur en eenvoud.',
+        'story.offer.title': 'Wat wij aanbieden:',
+        'story.offer.li1': 'Privé-domein met twee comfortabele huisjes tot max 12 gasten',
+        'story.offer.li2': 'Groot zwembad met zeezicht en poolhouse',
+        'story.offer.li3': 'Volledig uitgeruste keukens voor gezellige kookmomenten',
+        'story.offer.li4': 'Tuin vol geurige kruiden en lokale bloemen',
+        'story.offer.li5': 'Persoonlijke, discrete begeleiding',
+        'story.offer.li6': 'Ruimte, rust en natuur om te ademen en te genieten',
+        'story.sampieri.title': 'Wat je kan verwachten van Sampieri:',
+        'story.sampieri.li1': 'Authentieke Siciliaanse sfeer, ver weg van massatoerisme',
+        'story.sampieri.li2': 'Brede, ongerepte stranden met goudkleurig zand',
+        'story.sampieri.li3': 'Kleine visserdorpjes waar het leven zachtjes stroomt',
+        'story.sampieri.li4': 'Avonden met vurige zonsondergangen',
+        'story.sampieri.li5': 'Cultuursteden zoals Scicli, Modica en Noto vlakbij',
+        'story.quote': 'Hier leef je volgens het ritme van de zon, de zee en de aarde.<br>Hier proef je het échte Sicilië.',
+        'story.img1.alt': 'Samen koken met lokale ingrediënten',
+        'story.img2.alt': 'Zonsondergang op het terras',
+        'formula.heading': 'Onze Formule',
+        'common.readmore': 'Lees meer',
+        'faro.title': 'Faro',
+        'faro.tagline': 'Charmant gelijkvloers verblijf voor rust en comfort.',
+        'faro.layout': 'Indeling:',
+        'faro.li1': 'Living met directe tuin­toegang',
+        'faro.li2': 'Volledig uitgeruste keuken',
+        'faro.li3': 'Master bedroom (tweepersoonsbed/split)',
+        'faro.li4': '2e slaapkamer (twee singles)',
+        'faro.li5': 'Badkamer met regendouche',
+        'faro.li6': 'Apart gastentoilet',
+        'faro.details.heading': 'Faro – Detail',
+        'faro.details.text': 'Extra foto’s en verdieping over de inrichting, sfeer en ligging.',
+        'faro.details.img1.alt': 'Woonkamer Faro met tuinzicht',
+        'faro.details.img2.alt': 'Master bedroom Faro',
+        'faro.details.text2': 'Faro biedt een serene sfeer met directe toegang tot de tuin. Perfect voor koppels of kleine gezinnen die privacy en comfort waarderen.',
+        'passero.title': 'Passero',
+        'passero.tagline': 'Ruimer gelijkvloers huis voor families en vrienden.',
+        'passero.layout': 'Indeling:',
+        'passero.li1': 'Open leefruimte met zithoek & eetgedeelte',
+        'passero.li2': 'Volledig uitgeruste keuken',
+        'passero.li3': '2 master bedrooms',
+        'passero.li4': '2 slaapkamers met stapelbed',
+        'passero.li5': '2 badkamers met douche & toilet',
+        'passero.details.heading': 'Passero – Detail',
+        'passero.details.text': 'Ideaal voor groepen of families, met ruime leefruimte en moderne voorzieningen.',
+        'passero.details.img1.alt': 'Leefruimte Passero',
+        'passero.details.img2.alt': 'Slaapkamer Passero',
+        'passero.details.text2': 'Passero heeft twee master bedrooms en extra slaapplaatsen, ideaal voor families of vriendengroepen.',
+        'poolhouse.title': 'Poolhouse',
+        'poolhouse.tagline': 'Ontspanning met panoramisch zeezicht.',
+        'poolhouse.what': 'Wat biedt het:',
+        'poolhouse.li1': 'Overdekte lounge met zeezicht',
+        'poolhouse.li2': 'BBQ-zone & eetplaats',
+        'poolhouse.li3': 'Buitencinema',
+        'poolhouse.li4': 'Pingpong & tafelvoetbal',
+        'poolhouse.li5': 'Massageruimte',
+        'poolhouse.li6': 'Buitendouche & toilet',
+        'poolhouse.details.heading': 'Poolhouse – Detail',
+        'poolhouse.details.text': 'Lounge, buitencinema, panoramisch zeezicht en meer.',
+        'poolhouse.details.img1.alt': 'Poolhouse lounge met zeezicht',
+        'poolhouse.details.img2.alt': 'Buitencinema in het Poolhouse',
+        'poolhouse.details.text2': 'Geniet van BBQ-avonden, film-nights onder de sterren en pure ontspanning.',
+        'gallery.heading': 'Sfeerimpressies',
+        'gallery.img1.alt': 'Poolhouse bij zonsondergang',
+        'gallery.img2.alt': 'Verse marktproducten',
+        'gallery.img3.alt': 'Yoga bij zonsopgang',
+        'gallery.img4.alt': 'Buitencinema over het zwembad',
+        'otherfac.heading': 'Andere Faciliteiten',
+        'otherfac.li1': 'Grote speeltuin met schommels, glijbaan en zandbak',
+        'otherfac.li2': 'Overdekte garage met parkeer- en fietsbergruimte',
+        'otherfac.li3': 'Uitgestrekte tuin vol kruiden, bloemen & olijfbomen',
+        'otherfac.li4': 'Privéterrassen bij elk huisje',
+        'included.heading': 'Alles is geregeld vanaf je landing',
+        'included.li1': 'Twee huisjes samen geschikt voor maximaal 12 gasten',
+        'included.li2': 'Luchthaventransfer (optioneel, op aanvraag) vanaf Catania Airport',
+        'included.li3': 'Persoonlijke assistentie - altijd beschikbaar, maar discreet',
+        'included.li4': 'Welkomstmand bij aankomst met lokale basisproducten',
+        'included.li5': 'Fris bedlinnen en schoonmaakservice',
+        'included.li6': 'Privé zwembad & estate 24/7',
+        'included.li7': 'Snelle Wi-Fi',
+        'included.li8': 'Handdoeken, lakens & verzorgingsproducten',
+        'included.li9': 'Privé parking',
+        'included.li10': 'Optioneel: massage, yoga, chef, trekking, excursies',
+        'dates.heading': 'Retreat Data & Prijzen 2025',
+        'dates.th.retreat': 'Retreat',
+        'dates.th.dates': 'Datums',
+        'dates.th.guests': 'Gasten',
+        'dates.th.price': 'Prijs',
+        'dates.row1.retreat': 'Retreat mei',
+        'dates.row1.dates': '18–24 mei',
+        'dates.row1.price': '(reeds geboekt)',
+        'dates.row2.retreat': 'Retreat juni',
+        'dates.row2.dates': '8–14 juni',
+        'dates.row3.retreat': 'Retreat juli',
+        'dates.row3.dates': '13–19 juli',
+        'dates.row3.price': '(reeds geboekt)',
+        'dates.row4.retreat': 'Retreat augustus',
+        'dates.row4.dates': '3–9 augustus',
+        'dates.note': '*Prijs exclusief vlucht. €450 voorschot vereist.',
+        'testimonials.heading': 'Gasten aan het woord',
+        'testimonials.q1': '“Beste week van ons leven. Mijn tieners vergaten hun gsm!”<br><span class="font-semibold">Els & Jan, Antwerpen</span>',
+        'testimonials.q2': '“We kookten, lachten, zwommen onder de sterren. We boeken alvast opnieuw.”<br><span class="font-semibold">Julie, Gent</span>',
+        'testimonials.q3': '“Als chef dacht ik Siciliaanse smaken te kennen. Marco\'s nonna gaf me een masterclass.”<br><span class="font-semibold">Tom, Rotterdam</span>',
+        'reserve.heading': 'Klaar om mee te reizen?',
+        'reserve.text': 'Wij antwoorden binnen 24 uur en helpen met vluchten of speciale wensen.',
+        'reserve.name.placeholder': 'Volledige naam',
+        'reserve.email.placeholder': 'E-mailadres',
+        'reserve.phone.placeholder': 'Telefoonnummer (optioneel)',
+        'reserve.select.placeholder': '',
+        'reserve.guests.placeholder': 'Aantal gasten',
+        'reserve.message.placeholder': 'Speciale wensen of dieetvoorkeuren',
+        'reserve.submit': 'Verzend aanvraag',
+        'reserve.note': 'Jouw gegevens zijn veilig – geen spam.'
+      },
+      en: {
+        'meta.title': 'Tinkité – Your slice of paradise in Sicily',
+        'meta.description': 'Escape to a private Sicilian estate with pool and sea view. Culinary, wellness & creative retreats, organised by a Belgian-Italian family.',
+        'hero.title': 'Welcome to Tinkité',
+        'hero.subtitle': 'A place where you enjoy space, privacy, simplicity&nbsp;and&nbsp;the&nbsp;luxury&nbsp;of&nbsp;having&nbsp;nothing&nbsp;to&nbsp;do<br><span class="uppercase tracking-wide">Sampieri, Sicily</span>',
+        'hero.cta': 'Discover Our Concept',
+        'hero.img.alt': 'Infinity-pool with sea view at sunset',
+        'story.heading': 'The Luxury of Simplicity',
+        'story.text': 'At Tinkité Sicily everything revolves around peace, space and small moments of joy. From the first morning light to the last glow of sunset: live at your own pace, surrounded by nature and simplicity.',
+        'story.offer.title': 'What we offer:',
+        'story.offer.li1': 'Private estate with two comfortable cottages (up to 12 guests)',
+        'story.offer.li2': 'Large pool with sea view and pool-house',
+        'story.offer.li3': 'Fully equipped kitchens for cosy cooking sessions',
+        'story.offer.li4': 'Garden full of fragrant herbs and local flowers',
+        'story.offer.li5': 'Personal, discreet assistance',
+        'story.offer.li6': 'Space, peace and nature to breathe and enjoy',
+        'story.sampieri.title': 'What to expect from Sampieri:',
+        'story.sampieri.li1': 'Authentic Sicilian vibe, far from mass tourism',
+        'story.sampieri.li2': 'Wide, unspoilt beaches with golden sand',
+        'story.sampieri.li3': 'Small fishing villages where life flows gently',
+        'story.sampieri.li4': 'Evenings with fiery sunsets',
+        'story.sampieri.li5': 'Cultural gems like Scicli, Modica and Noto nearby',
+        'story.quote': 'Here you live by the rhythm of the sun, the sea and the earth.<br>Here you taste the real Sicily.',
+        'story.img1.alt': 'Cooking together with local ingredients',
+        'story.img2.alt': 'Terrace sunset',
+        'formula.heading': 'Our Concept',
+        'common.readmore': 'Read more',
+        'faro.title': 'Faro',
+        'faro.tagline': 'Charming ground-floor cottage for peace and comfort.',
+        'faro.layout': 'Layout:',
+        'faro.li1': 'Living room with direct garden access',
+        'faro.li2': 'Fully equipped kitchen',
+        'faro.li3': 'Master bedroom (double/split)',
+        'faro.li4': '2nd bedroom (two singles)',
+        'faro.li5': 'Bathroom with rain-shower',
+        'faro.li6': 'Separate guest toilet',
+        'faro.details.heading': 'Faro – Detail',
+        'faro.details.text': 'Additional photos plus details of furnishing, ambience & location.',
+        'faro.details.img1.alt': 'Faro living room with garden view',
+        'faro.details.img2.alt': 'Faro master bedroom',
+        'faro.details.text2': 'Faro offers a serene atmosphere with direct garden access – perfect for couples or small families who value privacy and comfort.',
+        'passero.title': 'Passero',
+        'passero.tagline': 'Spacious ground-floor house for families and friends.',
+        'passero.layout': 'Layout:',
+        'passero.li1': 'Open living area with lounge & dining corner',
+        'passero.li2': 'Fully equipped kitchen',
+        'passero.li3': '2 master bedrooms',
+        'passero.li4': '2 bedrooms with bunk beds',
+        'passero.li5': '2 bathrooms with shower & WC',
+        'passero.details.heading': 'Passero – Detail',
+        'passero.details.text': 'Ideal for groups or families, with generous living space and modern amenities.',
+        'passero.details.img1.alt': 'Passero living area',
+        'passero.details.img2.alt': 'Passero bedroom',
+        'passero.details.text2': 'Passero includes two master bedrooms plus extra sleeping places – ideal for families or groups of friends.',
+        'poolhouse.title': 'Poolhouse',
+        'poolhouse.tagline': 'Relaxation with panoramic sea view.',
+        'poolhouse.what': 'It offers:',
+        'poolhouse.li1': 'Covered lounge with sea view',
+        'poolhouse.li2': 'BBQ area & dining space',
+        'poolhouse.li3': 'Outdoor cinema',
+        'poolhouse.li4': 'Ping-pong & table football',
+        'poolhouse.li5': 'Massage room',
+        'poolhouse.li6': 'Outdoor shower & toilet',
+        'poolhouse.details.heading': 'Poolhouse – Detail',
+        'poolhouse.details.text': 'Lounge, outdoor cinema, panoramic sea view & more.',
+        'poolhouse.details.img1.alt': 'Poolhouse lounge with sea view',
+        'poolhouse.details.img2.alt': 'Outdoor cinema at the Poolhouse',
+        'poolhouse.details.text2': 'Enjoy BBQ evenings, movie nights under the stars and pure relaxation.',
+        'gallery.heading': 'Atmosphere',
+        'gallery.img1.alt': 'Poolhouse at sunset',
+        'gallery.img2.alt': 'Fresh market produce',
+        'gallery.img3.alt': 'Sunrise yoga',
+        'gallery.img4.alt': 'Outdoor cinema over the pool',
+        'otherfac.heading': 'Other Facilities',
+        'otherfac.li1': 'Large playground with swings, slide and sand-pit',
+        'otherfac.li2': 'Covered garage with parking & bike storage',
+        'otherfac.li3': 'Extensive garden with herbs, flowers & olive trees',
+        'otherfac.li4': 'Private terraces at each cottage',
+        'included.heading': 'Everything is arranged from touchdown',
+        'included.li1': 'Two cottages together for a maximum of 12 guests',
+        'included.li2': 'Airport transfer (optional) from Catania Airport',
+        'included.li3': 'Personal assistance – always available yet discreet',
+        'included.li4': 'Welcome basket with local basics',
+        'included.li5': 'Fresh bed-linen and cleaning service',
+        'included.li6': 'Private pool & estate 24/7',
+        'included.li7': 'Fast Wi-Fi',
+        'included.li8': 'Towels, bed-linen & toiletries',
+        'included.li9': 'Private parking',
+        'included.li10': 'Optional: massage, yoga, chef, trekking, excursions',
+        'dates.heading': 'Retreat Dates & Prices 2025',
+        'dates.th.retreat': 'Retreat',
+        'dates.th.dates': 'Dates',
+        'dates.th.guests': 'Guests',
+        'dates.th.price': 'Price',
+        'dates.row1.retreat': 'May Retreat',
+        'dates.row1.dates': '18–24 May',
+        'dates.row1.price': '(fully booked)',
+        'dates.row2.retreat': 'June Retreat',
+        'dates.row2.dates': '8–14 June',
+        'dates.row3.retreat': 'July Retreat',
+        'dates.row3.dates': '13–19 July',
+        'dates.row3.price': '(fully booked)',
+        'dates.row4.retreat': 'August Retreat',
+        'dates.row4.dates': '3–9 August',
+        'dates.note': '*Price excludes flights. €450 deposit required.',
+        'testimonials.heading': 'Guest Quotes',
+        'testimonials.q1': '“Best week of our lives. My teens forgot their phones!”<br><span class="font-semibold">Els & Jan, Antwerp</span>',
+        'testimonials.q2': '“We cooked, laughed, swam under the stars. Already re-booking.”<br><span class="font-semibold">Julie, Ghent</span>',
+        'testimonials.q3': '“As a chef I thought I knew Sicilian flavours. Marco’s nonna gave me a masterclass.”<br><span class="font-semibold">Tom, Rotterdam</span>',
+        'reserve.heading': 'Ready to join us?',
+        'reserve.text': 'We reply within 24 hours and help with flights or special requests.',
+        'reserve.name.placeholder': 'Full name',
+        'reserve.email.placeholder': 'Email address',
+        'reserve.phone.placeholder': 'Phone number (optional)',
+        'reserve.select.placeholder': '',
+        'reserve.guests.placeholder': 'Number of guests',
+        'reserve.message.placeholder': 'Special requests or dietary needs',
+        'reserve.submit': 'Send Inquiry',
+        'reserve.note': 'Your data is safe – absolutely no spam.'
+      }
+    };
+
+    // 2) Taal toepassen
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.classList.toggle('lang-en', lang === 'en');
+      document.documentElement.classList.toggle('lang-nl', lang === 'nl');
+      localStorage.setItem('lang', lang);
+
+      // Titel + meta
+      document.querySelector('title').textContent = t[lang]['meta.title'];
+      document.querySelector('meta[name="description"]').content = t[lang]['meta.description'];
+
+      // InnerHTML
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[lang][key]) el.innerHTML = t[lang][key];
+      });
+
+      // Placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if (t[lang][key]) el.placeholder = t[lang][key];
+      });
+
+      // Alt-attributes
+      document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+        const key = el.dataset.i18nAlt;
+        if (t[lang][key]) el.alt = t[lang][key];
+      });
+
+      // Active button styling
+      document.getElementById('set-nl').classList.toggle('bg-white/80', lang === 'nl');
+      document.getElementById('set-en').classList.toggle('bg-white/80', lang === 'en');
+    }
+
+    // 3) Init
+    document.addEventListener('DOMContentLoaded', () => {
+      GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true });
+      const initLang = localStorage.getItem('lang') || 'nl';
+      setLang(initLang);
+      document.getElementById('set-nl').addEventListener('click', () => setLang('nl'));
+      document.getElementById('set-en').addEventListener('click', () => setLang('en'));
+    });
+  </script>
+</body>
+</html>
